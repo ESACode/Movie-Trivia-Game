@@ -101,6 +101,37 @@ nav li {
     background-color: grey;
     text-align: center;
     border: 6px dotted black;
+    color: lightgoldenrodyellow;
+}
+
+/*----------------------------------------answer page content-----------------------------*/
+.score {
+    text-align: center;
+    background-color: grey;
+    padding: 40px;
+    border: 6px dotted black;
+    color: lightgoldenrodyellow;
+}
+
+
+.answers {
+    text-align: center;
+    background-color: grey;
+    border: 5px solid burlywood;
+}
+
+.answers img {
+    width: 70%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.value {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 25px;
+    color: lightgoldenrodyellow;
+    border: 5px dashed lightskyblue;
 }
 
 /*------------------------------------------Media Queries------------------------------------------*/
@@ -137,7 +168,25 @@ nav li {
         text-align: center;
     }
 
+
+
+    /*answers page content*/
+
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .answers {
+        width: 50%;
+        height: auto;
+    }
+
+    .answers img {
+        width: 55%;
+    }
 }
+
 
 @media (min-width: 1025px) {
 
@@ -168,6 +217,10 @@ nav li {
         padding-top: 350px;
     }
 
+    .intro {
+        padding: 20px;
+    }
+
     .container {
         text-align: center;
         width: 33.3333%;
@@ -189,23 +242,18 @@ nav li {
 
     /*answers page content*/
 
-    .score {
-        text-align: center;
-    }
-
     .main-content {
         display: flex;
         flex-wrap: wrap;
     }
 
     .answers {
-        text-align: center;
         width: 50%;
         height: auto;
-        background-color: grey;
     }
 
     .answers img {
-
+        width: 55%;
     }
+
 }

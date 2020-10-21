@@ -60,7 +60,7 @@ for(let i = 0; i < eightiesQuestions.length; i++) {
     html2 += `
             <div class="answers">
                 <img src="${display.photo}" alt="${display.alt}">
-                <h2>${display.value}</h2>
+                <h3 class="value">${display.value}</h3>
             </div>
     `;
 }

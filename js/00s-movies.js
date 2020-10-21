@@ -44,7 +44,11 @@ for(let i = 0; i < aughtQuestions.length; i++) {
 }
 
 // 3. Display number of questions correct to the user
-let html1 = `<h1>You got ${correctAnswers} question(s) correct!</h1>`;
+let html1 = `
+<div class="score">
+<h1>You got ${correctAnswers} question(s) correct!</h1>
+</div>
+`;
 
 document.querySelector('main').innerHTML = html1;
 
@@ -54,9 +58,11 @@ let html2 = '';
 for(let i = 0; i < aughtQuestions.length; i++) {
     let display = aughtQuestions[i];
     html2 += `
-        <img src="${display.photo}" alt="${display.alt}">
-        <h2>${display.value}</h2>
+            <div class="answers">
+                <img src="${display.photo}" alt="${display.alt}">
+                <h3 class="value">${display.value}</h3>
+            </div>
     `;
 }
 
-document.querySelector('main').insertAdjacentHTML('beforeend', html2);
+document.querySelector('main').innerHTML = html2;
