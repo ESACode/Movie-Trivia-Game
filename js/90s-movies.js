@@ -44,7 +44,7 @@ for(let i = 0; i < ninetiesQuestions.length; i++) {
 }
 
 // 3. Display number of questions correct to the user
-let html1 = `<h1>You got ${correctAnswers} questions correct!</h1>`;
+let html1 = `<h1>You got ${correctAnswers} question(s) correct!</h1>`;
 
 document.querySelector('main').innerHTML = html1;
 

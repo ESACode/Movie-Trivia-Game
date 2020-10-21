@@ -1,1 +1,211 @@
-s
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    border: 4px dotted burlywood;
+    display: block;
+    background-color: gray;
+    list-style-type: none;
+    text-align: center;
+    color: lightgoldenrodyellow;
+}
+
+nav h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+nav a,
+main a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none; 
+}
+
+nav a {
+    text-decoration: none; 
+}
+
+nav a:hover,
+main a:hover {
+    color: blue;
+}
+
+nav li {
+    padding: 10px;
+}
+
+.background {
+    /* The image used */
+    background-image: url("../img/Hollywood-Sign.jpg");
+
+     /* Center and scale the image*/
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-top: 120px;
+}
+
+.intro {
+    text-align: center;
+    background-color: grey;
+    border: 6px dashed black;
+    color: lightgoldenrodyellow;
+}
+
+.images-container {
+    /*Remove bullet points */
+    list-style-type: none; 
+    background-color: grey;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: grey;
+}
+
+.eighties {
+    border: 6px solid lightgreen;
+}
+
+.nineties {
+    border: 6px solid orangered;
+}
+
+.aughts {
+    border: 6px solid blueviolet;
+}
+
+/* background color wasn't extending below 2000's images block, this fixed it */
+.container ul {
+    overflow: hidden;
+}
+
+/* resize images */
+.container img {
+    width: 50%;
+    height: auto;
+    float: left;
+    padding: 10px;
+}
+
+.footer {
+    padding: 30px;
+    background-color: grey;
+    text-align: center;
+    border: 6px dotted black;
+}
+
+/*------------------------------------------Media Queries------------------------------------------*/
+
+@media (min-width: 769px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .background {
+        padding-top: 250px;
+    }
+
+    /* resize images; 4 per row */
+    .container img {
+        width: 25%;
+        height: auto;
+        float: left;
+        padding: 10px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    nav li {
+        padding: 15px;
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 1025px) {
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .navbar {
+        display: flex;
+        list-style-type: none;
+    }
+
+    /*Issue with navbar h1 and links not aligning along horizontal axis, this fixed it*/
+    nav h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+
+    nav li {
+        padding: 20px;
+    }
+
+    .background {
+        padding-top: 350px;
+    }
+
+    .container {
+        text-align: center;
+        width: 33.3333%;
+        height: auto;
+        background-color: grey;
+    }
+
+    /* resize images */
+    .container img {
+        width: 50%;
+        height: auto;
+        float: left;
+        padding: 10px;
+    }
+
+    .main {
+        display: flex;
+    }
+
+    /*answers page content*/
+
+    .score {
+        text-align: center;
+    }
+
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .answers {
+        text-align: center;
+        width: 50%;
+        height: auto;
+        background-color: grey;
+    }
+
+    .answers img {
+
+    }
+}
