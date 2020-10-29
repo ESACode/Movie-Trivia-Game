@@ -75,7 +75,7 @@ let html1 = `
 </div>
 `;
 
-document.querySelector('main').innerHTML = html1;
+document.querySelector('summary').innerHTML = html1;
 
 // 4. Display the correct answers to the user.  
 let html2 = '';
