@@ -113,6 +113,31 @@ nav li {
     color: lightgoldenrodyellow;
 }
 
+.correct { 
+    margin: 15px;
+    padding: 15px;
+    border: 4px solid green;
+}
+
+.correct-list ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    color: lightgoldenrodyellow;
+}
+
+.incorrect {
+    margin: 15px;
+    padding: 15px;
+    border: 4px solid red;
+}
+
+.incorrect-list ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    color: lightgoldenrodyellow;
+}
 
 .answers {
     text-align: center;
@@ -127,8 +152,7 @@ nav li {
 }
 
 .value {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px;
     padding: 25px;
     color: lightgoldenrodyellow;
     border: 5px dashed lightskyblue;
