@@ -48,6 +48,7 @@ for(let i = 0; i < ninetiesQuestions.length; i++) {
     }
 }
 
+// 3. Display number of questions correct to the user and show which questions were right and wrong
 function createListItems(arr) {
     let items = '';
     for (let i = 0; i < arr.length; i++) {
@@ -56,7 +57,6 @@ function createListItems(arr) {
     return items;
   }
 
-// 3. Display number of questions correct to the user and show which questions were right and wrong
 let html1 = `
 <div class="score">
     <h1>You got a total of ${correctAnswers} question(s) correct!</h1>

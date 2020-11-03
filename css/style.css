@@ -6,7 +6,8 @@
 
 .header {
     border: 4px dotted burlywood;
-    display: block;
+    display: flex;
+    flex-direction: column;
     background-color: gray;
     list-style-type: none;
     text-align: center;
