@@ -1,3 +1,5 @@
+/*-----------------------------------------------Content For All Pages------------------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +14,7 @@
     list-style-type: none;
     text-align: center;
     color: lightgoldenrodyellow;
+    text-shadow: 1px 1px black;
 }
 
 nav h1 {
@@ -26,6 +29,11 @@ main a {
     text-transform: uppercase;
     font-weight: 600;
     text-decoration: none; 
+    text-shadow: 1px 1px black;
+}
+
+.container h1 {
+    margin: 30px;
 }
 
 nav a {
@@ -35,6 +43,7 @@ nav a {
 nav a:hover,
 main a:hover {
     color: blue;
+    text-shadow: 1px 1px black;
 }
 
 nav li {
@@ -52,11 +61,27 @@ nav li {
      padding-top: 120px;
 }
 
+.footer {
+    padding: 30px;
+    background-color: grey;
+    text-align: center;
+    border: 5px dotted black;
+    color: lightgoldenrodyellow;
+    text-shadow: 1px 1px black;
+}
+
+/*----------------------------------------------Main Index Page Content----------------------------------*/
+
 .intro {
     text-align: center;
     background-color: grey;
-    border: 6px dashed black;
+    border: 4px dashed black;
     color: lightgoldenrodyellow;
+    text-shadow: 1px 1px black;
+}
+
+.intro h2 {
+    padding: 20px;
 }
 
 .images-container {
@@ -73,15 +98,15 @@ nav li {
 }
 
 .eighties {
-    border: 6px solid lightgreen;
+    border: 4px solid lightgreen;
 }
 
 .nineties {
-    border: 6px solid orangered;
+    border: 4px solid pink;
 }
 
 .aughts {
-    border: 6px solid blueviolet;
+    border: 4px solid lightskyblue;
 }
 
 /* background color wasn't extending below 2000's images block, this fixed it */
@@ -97,27 +122,107 @@ nav li {
     padding: 10px;
 }
 
-.footer {
-    padding: 30px;
-    background-color: grey;
+/*----------------------------------------------Question Page Content--------------------------------*/
+
+.questions {
     text-align: center;
-    border: 6px dotted black;
-    color: lightgoldenrodyellow;
+    background-color: grey;
+    border: 4px solid burlywood;
 }
 
-/*----------------------------------------answer page content-----------------------------*/
+.questions img {
+    width: 50%;
+    height: auto;
+    float: left;
+    padding: 10px;
+}
+
+
+.question-images-container {
+    list-style-type: none; 
+    background-color: grey;
+}
+
+/* fix the collapsed containers from the float used on the images */
+.question-images-container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.question-container {
+    margin: 15px;
+    padding: 25px;
+    color: lightgoldenrodyellow;
+    border: 4px dashed lightskyblue;
+    border-radius: 15px;
+    text-align: center;
+    text-shadow: 1px 1px black;
+}
+
+.displayQuestion {
+    margin-bottom: 20px;
+}
+
+.radio {
+    color: whitesmoke;
+    margin: 0 auto;
+    width: auto;
+    text-align: left;
+    display: table;
+    text-shadow: 1px 1px black;
+}
+
+span {
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+.btn-container {
+    text-align: center;
+    background-color: grey;
+    padding: 30px;
+}
+
+button[type=button] {
+    background-color: seagreen;
+    color: white;
+    margin: 4px 4px;
+    cursor: pointer;
+    text-align: center;
+    padding: 40px;
+    font-size: 20px;
+    border-radius: 15px;
+    text-shadow: 1px 1px black;
+}
+
+/*----------------------------------------------Answer Page Content----------------------------------*/
+
 .score {
     text-align: center;
     background-color: grey;
     padding: 40px;
     border: 6px dotted black;
     color: lightgoldenrodyellow;
+    text-shadow: 1px 1px black;
+}
+
+.score h1 {
+    padding-bottom: 30px;
 }
 
 .correct { 
     margin: 15px;
     padding: 15px;
     border: 4px solid green;
+    border-radius: 15px;
+}
+
+.correct h2 {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: lightgreen;
+    padding: 18px;
 }
 
 .correct-list ul {
@@ -125,12 +230,28 @@ nav li {
     margin-bottom: 10px;
     list-style-type: none;
     color: lightgoldenrodyellow;
+    text-shadow: 1px 1px black;
+}
+
+.correct-list li {
+    margin: 30px;
+    text-shadow: 1px 1px black;
+    font-size: 20px;
+    text-align: center;
 }
 
 .incorrect {
     margin: 15px;
     padding: 15px;
     border: 4px solid red;
+    border-radius: 15px;
+}
+
+.incorrect h2 {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: pink;
+    padding: 18px;
 }
 
 .incorrect-list ul {
@@ -138,12 +259,20 @@ nav li {
     margin-bottom: 10px;
     list-style-type: none;
     color: lightgoldenrodyellow;
+    text-shadow: 1px 1px black;
+}
+
+.incorrect-list li {
+    margin: 30px;
+    text-shadow: 1px 1px black;
+    font-size: 20px;
+    text-align: center;
 }
 
 .answers {
     text-align: center;
     background-color: grey;
-    border: 5px solid burlywood;
+    border: 4px solid burlywood;
 }
 
 .answers img {
@@ -156,7 +285,9 @@ nav li {
     margin: 15px;
     padding: 25px;
     color: lightgoldenrodyellow;
-    border: 5px dashed lightskyblue;
+    border: 5px dashed lightgreen;
+    text-shadow: 1px 1px black;
+    border-radius: 15px;
 }
 
 /*------------------------------------------Media Queries------------------------------------------*/
@@ -193,7 +324,16 @@ nav li {
         text-align: center;
     }
 
+    /*questions page content*/
 
+    .questions {
+        width: 50%;
+        height: auto;
+    }
+
+    .questions img {
+        width: 50%;
+    }
 
     /*answers page content*/
 
@@ -265,6 +405,17 @@ nav li {
         display: flex;
     }
 
+    /*questions page content*/
+
+    .questions {
+        width: 33.3333%;
+        height: auto;
+    }
+
+    .questions img {
+        width: 50%;
+    }
+
     /*answers page content*/
 
     .main-content {
@@ -273,12 +424,12 @@ nav li {
     }
 
     .answers {
-        width: 50%;
+        width: 33.3333%;
         height: auto;
     }
 
     .answers img {
-        width: 55%;
+        width: 65%;
     }
 
 }
