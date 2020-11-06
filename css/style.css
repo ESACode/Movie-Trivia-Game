@@ -80,8 +80,9 @@ nav li {
     text-shadow: 1px 1px black;
 }
 
-.intro h2 {
+.intro h1 {
     padding: 20px;
+    font-size: 35px;
 }
 
 .images-container {
@@ -209,6 +210,7 @@ button[type=button] {
 
 .score h1 {
     padding-bottom: 30px;
+    font-size: 35px;
 }
 
 .correct { 
@@ -223,6 +225,7 @@ button[type=button] {
     text-underline-position: under;
     text-decoration-color: lightgreen;
     padding: 18px;
+    font-size: 30px;
 }
 
 .correct-list ul {
@@ -252,6 +255,7 @@ button[type=button] {
     text-underline-position: under;
     text-decoration-color: pink;
     padding: 18px;
+    font-size: 30px;
 }
 
 .incorrect-list ul {

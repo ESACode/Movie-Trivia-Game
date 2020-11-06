@@ -232,7 +232,7 @@ function checkAnswersFunction() {
     let html2 = `
     <div class="score">
         <h1>You got a total of ${correctAnswers} question(s) correct.</h1>
-        <h1>See the correct answers below!<h1>
+        <h1>See the correct answers below!</h1>
         <div class="correct">
             <h2>You got these questions right:</h2>
             <div class="correct-list">
