@@ -153,7 +153,7 @@ function checkAnswersFunction() {
 
     //checks to make sure user selected an answer for each question.  It's making sure each instance of verify has a value placed in it
     for (let i = 0; i < verifyArray.length; i++) {
-        if(!verifyArray[i]) {
+        if(verifyArray[i] == null) {
             alert("Please select an answer for every question.")
             return false
         }
