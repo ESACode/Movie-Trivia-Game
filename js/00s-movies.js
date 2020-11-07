@@ -1,4 +1,4 @@
-// 1. Hold trivia game questions, answers, and stock photos for 00s movies.
+//Hold trivia game questions, answers, and stock photos for 00s movies in this array of objects
 const aughtQuestions = [
     {
         question: "1. Which movie earned more at the box office in 2000?",
@@ -80,7 +80,7 @@ const aughtQuestions = [
     }
 ];
 
-//Use a for loop to display the questions on the page.
+//Use a for loop to dynamically display the questions on the html page
 let html1 = '';
 
 for(let i = 0; i < aughtQuestions.length; i++) {
@@ -106,118 +106,58 @@ for(let i = 0; i < aughtQuestions.length; i++) {
 
 document.querySelector('main').innerHTML = html1;
 
-//Check if users answers are correct after they click submit and display correct answers on the page.
+//Function that checks if users answers are correct after user clicks submit and then displays correct answers on the page.
 function checkAnswersFunction() {
+
     //use these variables to store questions users got correct or incorrect and keep a count of their correct score. 
     const correct = [];
     const incorrect = [];
     let correctAnswers = 0;
 
-    //use these variables as references to each radio button grouping.  
-    let userChecked1 = document.getElementsByName("group1");
-    let userChecked2 = document.getElementsByName("group2");
-    let userChecked3 = document.getElementsByName("group3");
-    let userChecked4 = document.getElementsByName("group4");
-    let userChecked5 = document.getElementsByName("group5");
-    let userChecked6 = document.getElementsByName("group6");
+    //array to store reference to each radio grouping
+    let userCheckedArray = [
+        document.getElementsByName("group1"),
+        document.getElementsByName("group2"),
+        document.getElementsByName("group3"),
+        document.getElementsByName("group4"),
+        document.getElementsByName("group5"),
+        document.getElementsByName("group6"),
+    ];
 
     //use these variables to check if user selected an answer to every question.  
-    var verify1;
-    var verify2;
-    var verify3;
-    var verify4;
-    var verify5;
-    var verify6;
+    let verify1;
+    let verify2;
+    let verify3;
+    let verify4;
+    let verify5;
+    let verify6;
 
-    //use a for loop for each of radio buttons to check users answers
-    for (let i = 0; i <userChecked1.length; i++) {
-        let questions = aughtQuestions[0].questionDisplay;
-        let answers = aughtQuestions[0].answer;
-        if (userChecked1[i].checked) {
-            verify1 = userChecked1[i].value;
-            if(userChecked1[i].value === answers) {
-                correctAnswers++;
-                correct.push(questions);
-            } else {
-                incorrect.push(questions);
+    let verifyArray = [verify1, verify2, verify3, verify4, verify5, verify6];
+
+    //loop through the 2D array to check which button user checked for each radio grouping, and compare its value to correct answer
+    for (let i = 0; i < userCheckedArray.length; i++) {
+        for (let j = 0; j < userCheckedArray[i].length; j++) {
+            let questions = aughtQuestions[i].questionDisplay;
+            let answers = aughtQuestions[i].answer;
+            if (userCheckedArray[i][j].checked) {
+                verifyArray[i] = userCheckedArray[i][j].value;
+                if(userCheckedArray[i][j].value === answers) {
+                    correctAnswers++;
+                    correct.push(questions);
+                } else {
+                     incorrect.push(questions);
+                }
             }
         }
     }
 
-    for (let i = 0; i <userChecked2.length; i++) {
-        let questions = aughtQuestions[1].questionDisplay;
-        let answers = aughtQuestions[1].answer;
-        if (userChecked2[i].checked) {
-            verify2 = userChecked2[i].value;
-            if(userChecked2[i].value === answers) {
-                correctAnswers++;
-                correct.push(questions);
-            } else {
-                incorrect.push(questions);
-            }
-        }
-    }
 
-    for (let i = 0; i <userChecked3.length; i++) {
-        let questions = aughtQuestions[2].questionDisplay;
-        let answers = aughtQuestions[2].answer;
-        if (userChecked3[i].checked) {
-            verify3 = userChecked3[i].value;
-            if(userChecked3[i].value === answers) {
-                correctAnswers++;
-                correct.push(questions);
-            } else {
-                incorrect.push(questions);
-            }
+    //checks to make sure user selected an answer for each question.  It's making sure each instance of verify has a value placed in it
+    for (let i = 0; i < verifyArray.length; i++) {
+        if(!verifyArray[i]) {
+            alert("Please select an answer for every question.")
+            return false
         }
-    }
-
-    for (let i = 0; i <userChecked4.length; i++) {
-        let questions = aughtQuestions[3].questionDisplay;
-        let answers = aughtQuestions[3].answer;
-        if (userChecked4[i].checked) {
-            verify4 = userChecked4[i].value;
-            if(userChecked4[i].value === answers) {
-                correctAnswers++;
-                correct.push(questions);
-            } else {
-                incorrect.push(questions);
-            }
-        }
-    }
-
-    for (let i = 0; i <userChecked5.length; i++) {
-        let questions = aughtQuestions[4].questionDisplay;
-        let answers = aughtQuestions[4].answer;
-        if (userChecked5[i].checked) {
-            verify5 = userChecked1[i].value;
-            if(userChecked5[i].value === answers) {
-                correctAnswers++;
-                correct.push(questions);
-            } else {
-                incorrect.push(questions);
-            }
-        }
-    }
-
-    for (let i = 0; i <userChecked6.length; i++) {
-        let questions = aughtQuestions[5].questionDisplay;
-        let answers = aughtQuestions[5].answer;
-        if (userChecked6[i].checked) {
-            verify6 = userChecked1[i].value;
-            if(userChecked6[i].value === answers) {
-                correctAnswers++;
-                correct.push(questions);
-            } else {
-                incorrect.push(questions);
-            }
-        }
-    }
-
-    //Make sure user has selected an answer to all questions, prevent page from submitting if they didn't pick an answer  
-    if(!verify1 || !verify2 || !verify3 || !verify4 || !verify5 || !verify6) {
-        alert("Please select an answer for every question.")
-        return false
     }
 
     //Display number of questions correct to the user and show which questions were right and wrong
@@ -250,7 +190,7 @@ function checkAnswersFunction() {
 
     document.querySelector('summary').innerHTML = html2;
 
-    //Display the correct answers to the user on the page.  
+    //For loop to dynamically display the correct answers on the html page.  
     let html3 = '';
 
     for(let i = 0; i < aughtQuestions.length; i++) {
@@ -269,4 +209,5 @@ function checkAnswersFunction() {
     //remove the submit button from the answer page. 
     let html4 = '';
     document.querySelector('section').innerHTML = html4;
+
 } //end of function checkAnswersFunction()
