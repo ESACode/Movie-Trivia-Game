@@ -1,6 +1,6 @@
 # Movie-Trivia-Game
 
-This website will contain a trivia game that will let the user guess which movie earned more at the box office.  There will be a navigation bar that will let the user select which decade's movies they want to be quizzed on, the 80's, 90's, or 2000's.  The navigation menu and the page content will change based upon the user's screen size.  A Javascript loop will dynamincally display content on the page, such as the movie names and their box office grosses.  The website will change it's display based on the size of the user's screen via media queries.  
+This website will contain a trivia game that will let the user guess which movie earned more at the box office.  There will be a navigation bar that will let the user select which decade's movies they want to be quizzed on, the 80's, 90's, or 2000's.  Media queries will change the navigation menu and the page content based upon the user's screen size.  A Javascript loop will dynamically display content on the page. 
 
 The 3 Code Louisville Project requirements this webpage will satisfy will are:
 
