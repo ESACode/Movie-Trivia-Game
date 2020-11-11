@@ -89,10 +89,10 @@ for(let i = 0; i < ninetiesQuestions.length; i++) {
 
     html1 += `
             <div class="questions">
-                <ul class="question-images-container">
-                    <li><img src="${display1.photoA}" alt="${display1.altA}"></li>
-                    <li><img src="${display1.photoB}" alt="${display1.altB}"></li>
-                </ul>
+                <div class="question-images-container">
+                    <img src="${display1.photoA}" alt="${display1.altA}">
+                    <img src="${display1.photoB}" alt="${display1.altB}">
+                </div>
                 <div class="question-container">
                     <h3 class="displayQuestion">${display1.question}</h3>
                     <div class="radio">

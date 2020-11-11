@@ -85,12 +85,6 @@ nav li {
     font-size: 35px;
 }
 
-.images-container {
-    /*Remove bullet points */
-    list-style-type: none; 
-    background-color: grey;
-}
-
 .container {
     text-align: center;
     width: 100%;
@@ -110,19 +104,18 @@ nav li {
     border: 4px solid lightskyblue;
 }
 
-/* background color wasn't extending below 2000's images block, this fixed it */
-.container ul {
-    overflow: hidden;
-}
-
 /* resize images */
 .container img {
     width: 50%;
     height: auto;
-    float: left;
+    display: flex;
     padding: 10px;
 }
 
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 /*----------------------------------------------Question Page Content--------------------------------*/
 
 .questions {
@@ -131,25 +124,18 @@ nav li {
     border: 4px solid burlywood;
 }
 
+.question-images-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .questions img {
     width: 50%;
     height: auto;
-    float: left;
+    display: flex;
+    flex-wrap: wrap;
     padding: 10px;
 }
-
-
-.question-images-container {
-    list-style-type: none; 
-    background-color: grey;
-}
-
-/* fix the collapsed containers from the float used on the images */
-.question-images-container::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 
 .question-container {
     margin: 15px;
@@ -312,7 +298,8 @@ button[type=button] {
     .container img {
         width: 25%;
         height: auto;
-        float: left;
+        display: flex;
+        flex-wrap: wrap;
         padding: 10px;
     }
 
@@ -401,7 +388,8 @@ button[type=button] {
     .container img {
         width: 50%;
         height: auto;
-        float: left;
+        display: flex;
+        flex-wrap: wrap;
         padding: 10px;
     }
 
